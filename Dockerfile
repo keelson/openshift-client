@@ -4,8 +4,7 @@ ARG SRC="https://github.com/openshift/origin/releases/download/v3.6.0/openshift-
 ARG TMP="/tmp/client.tar" 
 RUN apk add --update openssl tar &&  \
     wget -O ${TMP} ${SRC} && \
-    tar -xzf ${TMP} --wildcards --no-anchored '*/oc' \
-    -C /bin && \
+    tar -xvzf -C /bin ${TMP} --wildcards --no-anchored '*/oc' && \
     rm ${TMP}
 
 USER 1001
