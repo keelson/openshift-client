@@ -7,9 +7,7 @@ RUN apk add --update openssl tar &&  \
     wget -O ${TMP} ${SRC} && \
     mkdir ${TMP_DIR} && \
     cd ${TMP_DIR} && \
-    pwd && \
     tar  -xvzf ${TMP}  && \
-    find ${TMP_DIR} -ls && \
     find ${TMP_DIR} -name oc -type f -exec mv {} /bin \; && \
     rm -rf ${TMP} && \
     rm -rf ${TMP_DIR} 
