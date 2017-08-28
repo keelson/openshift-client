@@ -8,10 +8,9 @@ RUN apk add --update openssl tar &&  \
     mkdir ${TMP_DIR} && \
     cd ${TMP_DIR} && \
     tar  -xvzf ${TMP}  && \
-    ls -lR  ${TMP_DIR} && \
-    find ${TMP_DIR} -name oc -type f -exec mv {} /bin \; #&& \
-    #rm -rf ${TMP} && \
-    #rm -rf ${TMP_DIR} 
+    mv ${TMP_DIR}/*/oc  /bin && \
+    rm -rf ${TMP} && \
+    rm -rf ${TMP_DIR} 
 
 USER 1001
 CMD /bin/oc version
