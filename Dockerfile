@@ -5,6 +5,7 @@ ARG TMP="/tmp/client.tar"
 ARG TMP_DIR="/tmp/extract" 
 RUN apk add --update openssl tar &&  \
     wget -O ${TMP} ${SRC} && \
+    mkdir ${TMP_DIR} && \
     cd ${TMP_DIR} && \
     pwd && \
     tar  -xvzf ${TMP}  && \
