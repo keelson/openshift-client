@@ -7,3 +7,5 @@ RUN wget -O ${TMP}} ${SRC}} && \
     -C /bin && \
     rm ${TMP}
 
+USER 1001
+
