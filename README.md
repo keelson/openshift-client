@@ -1,4 +1,4 @@
-# openshift origin client container based on alpine
+# openshift origin client container
 
 ## build
 
