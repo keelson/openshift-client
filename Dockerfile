@@ -6,7 +6,9 @@ ARG TMP_DIR="/tmp/extract"
 RUN apk add --update openssl tar &&  \
     wget -O ${TMP} ${SRC} && \
     cd ${TMP_EXTRACT} && \
+    pwd && \
     tar  -xvzf ${TMP}  && \
+    find ${TMP_EXTRACT} -ls && \
     find ${TMP_EXTRACT} -name oc -type f -exec mv {} /bin \; && \
     rm -rf ${TMP} && \
     rm -rf ${TMP_EXTRACT} 
