@@ -7,7 +7,7 @@ oc new-project jobs
 ```
 
 ```
-oc new-build https://github.com/keelson/openshift-client.git 
+oc new-build https://github.com/keelson/openshift-client.git --context-dir=centos
 ```
 
 ```
