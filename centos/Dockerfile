@@ -1,5 +1,4 @@
 FROM centos
-MAINTAINER bobo@sideburns.de
 RUN yum install -y centos-release-openshift-origin && \
     yum install -y origin-clients && \
     yum clean all && \

@@ -1,5 +1,4 @@
 FROM registry.access.redhat.com/rhel7/rhel
-MAINTAINER Boris Ruppert <boris.ruppert@sideburns.de>
 ENV SUMMARY="RHEL base image with openshift client tools"
 ARG OPENSHIFT_VERSION=3.6
 RUN yum repolist > /dev/null && \
